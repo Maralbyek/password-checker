@@ -44,11 +44,11 @@ def check_password_strength(password):
         feedback.append("This password is extremely weak and commonly used.")
 
 
-    if score >= 10:
+    if score >= 12:
         strength = "Almost Impossible "
     elif score >= 8:
         strength = "Strong"
-    elif score >= 4:
+    elif score >= 6:
         strength = "Weak"
     else:
         strength = "Pease of cake"
@@ -69,4 +69,5 @@ if __name__ == "__main__":
             print("- " + issue)
     else:
         print("Your password looks great!")
+
 
