@@ -22,6 +22,11 @@ def check_password_strength(password):
     else:
         feedback.append("Add at least one lowercase letter.")
 
+    if re.search(r"[ ]", password):
+        score += 1
+    else:
+        feadback.append("Space between the password not allowed.")
+
 
     if re.search(r"[0-9]", password):
         score += 1
@@ -64,3 +69,4 @@ if __name__ == "__main__":
             print("- " + issue)
     else:
         print("Your password looks great!")
+
